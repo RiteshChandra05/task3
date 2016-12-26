@@ -4,24 +4,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ovrldng
+namespace ovrrdng
 {
-
-    class test
+     class program
     {
-        static void Typeone(int x, int y)
+         public class person
+         {
+        public string FirstName = "FN";
+        public string LastName = "LN";
+        
+        public virtual void Printnamae()
         {
-            Console.WriteLine("both are integers");
+            Console.WriteLine(FirstName + " " + LastName);
         }
-        static void Typeone(int x, float y)
+    }
+        public class Teacher : person
         {
-            Console.WriteLine("one integer and one float");
+            public override void Printnamae()
+            {
+                Console.WriteLine(FirstName + " " + LastName + "tecaher");
+            }
         }
-
+    public class Student : person
+    {
+        public override void Printnamae()
+        {
+            Console.WriteLine(FirstName + " " + LastName + "student");
+        }
+    }
         static void Main(string[] args)
         {
-
-            Typeone(1, 2);
+            person[] persons = new person[3];
+            persons[0] = new person();
+            persons[1] = new Teacher();
+            persons[2] = new Student();
+            foreach(person p in persons)
+            {
+                p.Printnamae();
+            }
         }
     }
 }
