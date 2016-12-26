@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections;
 
-namespace arrylist
+namespace bxng
 {
-    class arylist
+    class Program
     {
         static void Main(string[] args)
         {
-            ArrayList al = new ArrayList();
-            al.Add(1);
-            al.Add(2);
-            al.Add(3);
-            Console.WriteLine(al.Capacity);
-            Console.WriteLine(al.Count);
+            int Num = 55;
+            object box = Num;// boxing
+            Console.WriteLine(box + " " + Num);
+            int unbox = (int)box;//unboxing
+            Console.WriteLine(box + " " + unbox);
         }
     }
 }
