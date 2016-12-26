@@ -3,18 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
-namespace bxng
+namespace hasttbl
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int Num = 55;
-            object box = Num;// boxing
-            Console.WriteLine(box + " " + Num);
-            int unbox = (int)box;//unboxing
-            Console.WriteLine(box + " " + unbox);
+            Hashtable h1 = new Hashtable();
+            h1[1] = "one";
+            h1[2] = "two";
+            h1[3] = "three";
+
+            foreach (DictionaryEntry e in h1)
+            {
+                Console.WriteLine(e.Key + " " + e.Value);
+
+            }
+
         }
     }
 }
