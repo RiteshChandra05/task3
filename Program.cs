@@ -3,25 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections;
 
-namespace hasttbl
+namespace ovrldng
 {
-    class Program
+
+    class test
     {
+        static void Typeone(int x, int y)
+        {
+            Console.WriteLine("both are integers");
+        }
+        static void Typeone(int x, float y)
+        {
+            Console.WriteLine("one integer and one float");
+        }
+
         static void Main(string[] args)
         {
-            Hashtable h1 = new Hashtable();
-            h1[1] = "one";
-            h1[2] = "two";
-            h1[3] = "three";
 
-            foreach (DictionaryEntry e in h1)
-            {
-                Console.WriteLine(e.Key + " " + e.Value);
-
-            }
-
+            Typeone(1, 2);
         }
     }
 }
